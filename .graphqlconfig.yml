@@ -1,0 +1,15 @@
+projects:
+  personalweb:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - query.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: .
+extensions:
+  amplify:
+    version: 3
