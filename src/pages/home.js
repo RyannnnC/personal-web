@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Container } from '@mui/material';
-import background from '../assets/home-bg.jpg';
 import './home.css'
 
 
@@ -17,14 +16,9 @@ class Home extends React.Component {
     render() {
         return (
         <React.Fragment>
-            <Container maxWidth='false' style={{ padding: 0 }} className='home_container'>
-                <div 
-                    className='home-bg'
-                    style={{
-                        backgroundImage: `url(${background})`
-                    }}
-                >
-                </div>
+            <Container maxWidth='false' class='home_container'>
+              <div style={{height: 1000}}>
+              </div>
             </Container>
         </React.Fragment>
         )

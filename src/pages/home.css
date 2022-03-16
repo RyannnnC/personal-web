@@ -1,8 +1,10 @@
 .home-bg{
-    width: 100%;
 }
 
 .home_container{
-    margin:0;
-    padding:0;
+    height: 800px;
+    width:100%;
+    background: url('../assets/home-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }

@@ -5,7 +5,9 @@ import awsExports from './aws-exports';
 import Home from './pages/home.js'
 import MenuBar from './component/menuBar.js';
 import Footer from './component/footer.js';
+import ScrollToTop from './component/scrollToTop.js'
 import './App.css';
+import './i18n.js';
 
 Amplify.configure(awsExports);
 
@@ -22,9 +24,10 @@ class App extends Component {
     return (
       <div>
         <MenuBar/>
-        <div style={{height: 1500,}}>
+        <div style={{height: 1500}}>
           <Home/>
         </div>
+        <ScrollToTop/>
         <Footer/>
       </div>
     );
@@ -32,4 +35,3 @@ class App extends Component {
 }
 
 export default App;
-
