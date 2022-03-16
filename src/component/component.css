@@ -1,0 +1,26 @@
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    margin:0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    transition: width 1s, height 1s;
+}
+
+.header[menu-open='false']{
+    width:0;
+    height:0;
+}
+.header[menu-open='true']{
+    width: 100%;
+    height: 100px;
+}
+
+.footer{
+    bottom:0;
+    padding: 20px;
+    margin:0;
+    text-align: center;
+}
