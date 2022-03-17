@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Container } from '@mui/material';
-import './component.css';
+import './component.scss';
 
 class Footer extends React.Component {
     constructor(props) {

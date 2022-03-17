@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from "react";
-import { Container } from '@mui/material';
-import './component.css';
+import './component.scss';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import Button from '@mui/material/Button';
 
@@ -34,7 +33,7 @@ function ScrollToTop() {
                   opacity:0.5,
                   pr:1,
                   pl:1,
-                  display: position == 0 ? 'none' : 'block',
+                  display: position === 0 ? 'none' : 'block',
                   position: 'fixed',
                   '&:hover':{
                     backgroundColor:'#fff',

@@ -1,0 +1,137 @@
+@import '../theme.scss';
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        content: "Front End Developer"
+    }
+    20% {
+        opacity: 1;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+        content: "Front End Developer"
+    }
+    40% {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        content: "Front End Developer"
+    }
+    60% {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        content: "Software Engineer"
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+        content: "Software Engineer"
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        content: "Software Engineer"
+    }
+}
+
+.contactme_container {
+    width:100%;
+    background: #000;
+    height:800px;
+    @media (max-width: $screen-xs-max) {
+        height: 600px;
+    }
+    @media (max-width: $screen-ss-max) {
+        height: 500px;
+    }
+}
+
+.aboutme_container {
+    width:100%;
+    background: #fff;
+    height:800px;
+    @media (max-width: $screen-xs-max) {
+        height: 600px;
+    }
+    @media (max-width: $screen-ss-max) {
+        height: 500px;
+    }
+}
+
+.home_container{
+    width:100%;
+    background: url('../assets/home-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:800px;
+    @media (max-width: $screen-xs-max) {
+        height: 600px;
+    }
+    @media (max-width: $screen-ss-max) {
+        height: 500px;
+    }
+}
+
+@mixin animated($action: fadeInDown) {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: $action;
+}
+
+.title {
+    margin-bottom: 0;
+}
+
+.font-xxl {
+    font-size: 100px;
+    @media (max-width: $screen-xs-max) {
+        font-size: 70px;
+    }
+    @media (max-width: $screen-ss-max) {
+        font-size: 40px;
+    }
+}
+
+.subtitle {
+    display: flex;
+    margin-top: 0;
+    margin-left: 2px;
+    &:after {
+        animation-name: fadeInUp;
+        animation-duration:  10s;
+        animation-iteration-count: infinite ;
+        animation-fill-mode: both;
+        display: block;
+        content: "Front End Developer";
+    }
+    line-height:50px;
+}
+
+.font-xl {
+    font-size: 26px;
+    @media (max-width: $screen-xs-max) {
+        font-size: 20px;
+    }
+    @media (max-width: $screen-ss-max) {
+        font-size: 16px;
+    }
+}
+
+.font-blue {
+    color:aqua;
+}
+
+.font-white {
+    color:azure;
+}

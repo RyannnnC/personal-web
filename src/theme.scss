@@ -1,0 +1,20 @@
+// Breakpoint
+$body-max-width: 1310px;
+// Super small screen / small screen phone
+$screen-ss-min: 480px;
+// Extra small screen / big screen phone
+$screen-xs-min: 576px;
+// Small screen / tablet
+$screen-sm-min: 768px;
+// Medium screen / desktop
+$screen-md-min: 992px;
+// Large screen / wide desktop
+$screen-lg-min: 1200px;
+// Large screen / wider desktop
+$screen-lg-med: 1260px;
+$screen-zs-max: ($screen-ss-min - 1); // 479px
+$screen-ss-max: ($screen-xs-min - 1); // 575px
+$screen-xs-max: ($screen-sm-min - 1); // 767px
+$screen-sm-max: ($screen-md-min - 1); // 991px
+$screen-md-max: ($screen-lg-min - 1); // 1199px
+
