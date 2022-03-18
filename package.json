@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@aws-amplify/ui-react": "^2.4.0",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",

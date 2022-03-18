@@ -1,63 +1,11 @@
 @import '../theme.scss';
+@import './animations.scss';
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-        content: "Front End Developer"
-    }
-    20% {
-        opacity: 1;
-        -webkit-transform: translateY(20px);
-        -ms-transform: translateY(20px);
-        transform: translateY(20px);
-        content: "Front End Developer"
-    }
-    40% {
-        opacity: 0;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-        content: "Front End Developer"
-    }
-    60% {
-        opacity: 0;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-        content: "Software Engineer"
-    }
-    80% {
-        opacity: 1;
-        -webkit-transform: translateY(20px);
-        -ms-transform: translateY(20px);
-        transform: translateY(20px);
-        content: "Software Engineer"
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-        content: "Software Engineer"
-    }
+.centered {
+    @include all_center
 }
 
 .contactme_container {
-    width:100%;
-    background: #000;
-    height:800px;
-    @media (max-width: $screen-xs-max) {
-        height: 600px;
-    }
-    @media (max-width: $screen-ss-max) {
-        height: 500px;
-    }
-}
-
-.aboutme_container {
     width:100%;
     background: #fff;
     height:800px;
@@ -69,38 +17,47 @@
     }
 }
 
+.aboutme_container {
+    width:100%;
+    background: #000;
+    height:600px;
+    @media (max-width: $screen-xs-max) {
+        height: 800px;
+    }
+    @media (max-width: $screen-ss-max) {
+        height: 900px;
+    }
+}
+
 .home_container{
     width:100%;
     background: url('../assets/home-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height:800px;
+    height:600px;
     @media (max-width: $screen-xs-max) {
-        height: 600px;
+        height: 500px;
     }
     @media (max-width: $screen-ss-max) {
-        height: 500px;
+        height: 400px;
     }
 }
 
-@mixin animated($action: fadeInDown) {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-name: $action;
+.intros {
+    @media (max-width: $screen-xs-max) {
+        flex-direction: column;
+    }
+    @media (max-width: $screen-ss-max) {
+        flex-direction: column;
+    }
 }
 
 .title {
     margin-bottom: 0;
 }
 
-.font-xxl {
-    font-size: 100px;
-    @media (max-width: $screen-xs-max) {
-        font-size: 70px;
-    }
-    @media (max-width: $screen-ss-max) {
-        font-size: 40px;
-    }
+.title_border {
+    border-bottom: 1px dotted #f3f5f8;
 }
 
 .subtitle {
@@ -118,20 +75,29 @@
     line-height:50px;
 }
 
-.font-xl {
-    font-size: 26px;
-    @media (max-width: $screen-xs-max) {
-        font-size: 20px;
-    }
-    @media (max-width: $screen-ss-max) {
-        font-size: 16px;
-    }
+.justified {
+    text-align:justify;
 }
 
-.font-blue {
-    color:aqua;
+.intro_icon {
+    display: flex;
+    margin:0;
+    animation-name: rotate;
+    animation-duration:  10s;
+    animation-iteration-count: infinite ;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    display:block;
 }
 
-.font-white {
-    color:azure;
+.contact_box {
+    background-color: #f3f5f8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include all_center;
+    border-bottom: 2px solid cyan;
+    height:250px;
+    &:hover {
+        border-bottom-color: gold;
+    }
 }
