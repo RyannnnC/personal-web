@@ -6,26 +6,32 @@ import EmailIcon from '@mui/icons-material/Email';
 import { WechatOutlined } from '@ant-design/icons';
 import Divider from '@mui/material/Divider';
 import './home.scss'
-
+import Gmap from '../component/map'
 
 function ContactMe () {
 const { t } = useTranslation("translation");
    return (
     <React.Fragment>
-        <Container maxWidth='false' class='contactme_container'>
+        <Container maxWidth='false' className='contactme_container'>
             <Grid container spacing={0}>
                 <Grid item xs={2}/>
                 <Grid item xs={8}>
-                    <h3 class="font-xl centered"> 
-                        <span class="font-blue">{t('contact')} </span>
+                    <h3 className="font-xl centered"> 
+                        <span className="font-blue">{t('contact')} </span>
                         {t('me')}
                     </h3>              
                 </Grid>
                 <Grid item xs={2}/>
             </Grid>
-            <Grid container spacing={2} p={2}>
-                <Grid item xs={4}>
-                    <div class="contact_box">
+            <Grid container spacing={2} p={2} mt={2} mb={4} column={{xs:4, sm:8, md:12}}>
+                <Grid className="contact_move" item xs={12} sm={4}
+                sx={{
+                    transition: 'all 0.5s ease-in-out',
+                    ":hover": {
+                        pt:0
+                    },
+                }}>
+                    <div className="contact_box">
                         <WechatOutlined style={{ fontSize:35}}/>
                         <h5>
                             {t('wechat')}
@@ -36,8 +42,14 @@ const { t } = useTranslation("translation");
                         </h5>
                     </div>
                 </Grid>
-                <Grid item xs={4}>
-                    <div class="contact_box">
+                <Grid className="contact_move" item xs={12} sm={4}
+                sx={{
+                    transition: 'all 0.5s ease-in-out',
+                    ":hover": {
+                        pt:0
+                    },
+                }}>
+                    <div className="contact_box">
                         <PhoneIphoneIcon fontSize="large"/>
                         <h5>
                             {t('phone')}
@@ -48,8 +60,14 @@ const { t } = useTranslation("translation");
                         </h5>
                     </div>            
                 </Grid>
-                <Grid item xs={4}>
-                    <div class="contact_box">
+                <Grid className="contact_move" item xs={12} sm={4}
+                sx={{
+                    transition: 'all 0.5s ease-in-out',
+                    ":hover": {
+                        pt:0
+                    },
+                }}>
+                    <div className="contact_box">
                         <EmailIcon fontSize="large"/>
                         <h5>
                             {t('email')}
@@ -59,6 +77,13 @@ const { t } = useTranslation("translation");
                             qq398268537@gmail.com
                         </h5>
                     </div>
+                </Grid>
+            </Grid>
+            <Grid className="responsive_row" container spacing={2} p={2}>
+                <Grid item xs={6}>
+                    <Gmap/>
+                </Grid>
+                <Grid item xs={6}>
                 </Grid>
             </Grid>
         </Container>

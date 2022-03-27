@@ -12,30 +12,31 @@ function AboutMe () {
     const { t } = useTranslation("translation");
         return (
         <React.Fragment>
-            <Container maxWidth='false' class='aboutme_container'>
-                <Grid className="intros" container spacing={0}>
-                    <Grid item xs p={4}>
+            <Container maxWidth='false' className='aboutme_container'>
+                <Grid container spacing={0}>
+                    <Grid item xs p={4} className="centered">
                         <img
+                            alt=""
                             src="https://technext.github.io/awesome1/images/portfolio-img2.jpg"
                         />
                     </Grid>
                     <Grid item xs sx={{ p:2 }}>
-                        <h1 class="centered font-white"> 
-                            <span class="font-blue">{t('about')} </span>
+                        <h1 className="centered font-white"> 
+                            <span className="font-blue">{t('about')} </span>
                             {t('me')} 
                         </h1>
-                        <h4 class="justified font-white font-thin">
+                        <h4 className="justified font-white font-thin">
                             {t('intro')}
                         </h4>
                         <Grid container spacing={0}>   
-                            <Grid container xs={10} sx={{ m:0 }} spacing={1}>
-                                <Grid xs={4} className="centered">
+                            <Grid container item xs={10} sx={{ m:0 }} spacing={1}>
+                                <Grid item xs={4} className="centered">
                                  <SportsTennisIcon sx={{ color: 'white'}}  fontSize="large"/>
                                 </Grid>
-                                <Grid xs={4} className="centered">
+                                <Grid item xs={4} className="centered">
                                     <SportsEsportsIcon sx={{ color: 'white'}}  fontSize="large"/>      
                                 </Grid>
-                                <Grid xs={4} className="centered">
+                                <Grid item xs={4} className="centered">
                                     <FitnessCenterIcon sx={{ color: 'white'}}  fontSize="large"/>
                                 </Grid>
                             </Grid>

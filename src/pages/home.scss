@@ -43,7 +43,7 @@
     }
 }
 
-.intros {
+.responsive_row {
     @media (max-width: $screen-xs-max) {
         flex-direction: column;
     }
@@ -96,8 +96,5 @@
     padding-bottom: 20px;
     @include all_center;
     border-bottom: 2px solid cyan;
-    height:250px;
-    &:hover {
-        border-bottom-color: gold;
-    }
+    height:200px;
 }

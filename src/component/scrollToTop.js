@@ -22,7 +22,7 @@ function ScrollToTop() {
     return (
         <React.Fragment key='left'>
             <Button
-                classes='buttonIcon'
+                className='buttonIcon'
                 variant="contained"
                 sx={{
                   bottom: '2em',

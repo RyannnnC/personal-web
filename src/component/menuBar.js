@@ -23,7 +23,7 @@ class MenuBar extends React.Component {
             <Container maxWidth='false' className='header' menu-open={this.state.open.toString()}>
             </Container>
             <Button 
-                classes='buttonIcon'
+                className='buttonIcon'
                 variant="contained"
                 sx={{ 
                   top: '2em',

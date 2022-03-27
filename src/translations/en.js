@@ -1,4 +1,4 @@
-export default 
+const en =
 {
     about: "ABOUT",
     me: "ME",
@@ -9,3 +9,4 @@ export default
     wechat: "WECHAT",
     email: "EMAIL",
 }
+export default en;

@@ -16,22 +16,22 @@ class Home extends React.Component {
     render() {
         return (
         <React.Fragment>
-            <Container maxWidth='false' class='home_container'>
+            <Container maxWidth='false' className='home_container'>
               <Grid container spacing={0}>
                 <Grid item xs={2}/>
                 <Grid item xs={8}>
-                    <h1 class="title font-xxl font-white">
+                    <h1 className="title font-xxl font-white">
                         RY
-                        <span class="font-blue">A</span>
+                        <span className="font-blue">A</span>
                         N   
                         <br/>
                         <span>
                             C
-                            <span class="font-blue">A</span>
+                            <span className="font-blue">A</span>
                             I
                         </span>
                     </h1>
-                    <h3 class="font-blue font-xl subtitle"/>
+                    <h3 className="font-blue font-xl subtitle"/>
                 </Grid>
                 <Grid item xs={2}/>
               </Grid>

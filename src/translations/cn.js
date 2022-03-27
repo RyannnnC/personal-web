@@ -1,4 +1,4 @@
-export default 
+const cn =
 {
     about: "关于",
     me: "我",
@@ -9,3 +9,4 @@ export default
     wechat: "微信",
     email: "邮箱",
 }
+export default cn;
