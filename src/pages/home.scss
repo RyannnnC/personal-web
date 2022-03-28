@@ -10,10 +10,10 @@
     background: #fff;
     height:800px;
     @media (max-width: $screen-xs-max) {
-        height: 600px;
+        height: 1000px;
     }
     @media (max-width: $screen-ss-max) {
-        height: 500px;
+        height: 1200px;
     }
 }
 

@@ -6,9 +6,11 @@ import EmailIcon from '@mui/icons-material/Email';
 import { WechatOutlined } from '@ant-design/icons';
 import Divider from '@mui/material/Divider';
 import './home.scss'
-import Gmap from '../component/map'
+import SimpleMap from '../component/map'
+import MessageForm from '../component/messageForm'
 
-function ContactMe () {
+
+function ContactMe (props) {
 const { t } = useTranslation("translation");
    return (
     <React.Fragment>
@@ -80,10 +82,13 @@ const { t } = useTranslation("translation");
                 </Grid>
             </Grid>
             <Grid className="responsive_row" container spacing={2} p={2}>
-                <Grid item xs={6}>
-                    <Gmap/>
+                <Grid item xs={12} sm={6}>
+                    <SimpleMap/>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
+                    <MessageForm 
+                        showAlert= {props.showAlert}
+                    />
                 </Grid>
             </Grid>
         </Container>

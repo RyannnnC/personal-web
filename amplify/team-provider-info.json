@@ -20,6 +20,13 @@
           "appId": "d31ntaeatfps2g",
           "type": "cicd"
         }
+      },
+      "function": {
+        "sendEmail": {
+          "sesEmail": "qq398268537@gmail.com",
+          "deploymentBucketName": "amplify-personalweb-dev-221600-deployment",
+          "s3Key": "amplify-builds/sendEmail-693066545358524d4346-build.zip"
+        }
       }
     }
   }

@@ -55,5 +55,22 @@
       "type": "cicd",
       "lastPushTimeStamp": "2022-02-18T02:34:18.899Z"
     }
+  },
+  "function": {
+    "sendEmail": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "api",
+          "resourceName": "personalweb",
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ]
+        }
+      ]
+    }
   }
 }
