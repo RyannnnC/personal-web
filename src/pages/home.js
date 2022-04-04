@@ -18,8 +18,8 @@ class Home extends React.Component {
         <React.Fragment>
             <Container maxWidth='false' className='home_container'>
               <Grid container spacing={0}>
-                <Grid item xs={2}/>
-                <Grid item xs={8}>
+                <Grid item xs={3}/>
+                <Grid item xs={7}>
                     <h1 className="title font-xxl font-white">
                         RY
                         <span className="font-blue">A</span>

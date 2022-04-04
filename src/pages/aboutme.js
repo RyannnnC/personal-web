@@ -22,6 +22,7 @@ function AboutMe () {
                     </Grid>
                     <Grid item xs sx={{ p:2 }}>
                         <h1 className="centered font-white"> 
+                            {t('alittle')} 
                             <span className="font-blue">{t('about')} </span>
                             {t('me')} 
                         </h1>

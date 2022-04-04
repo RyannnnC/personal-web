@@ -3,16 +3,19 @@
   "serviceConfiguration": {
     "apiName": "personalweb",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "C:\\Users\\qq398\\Desktop\\Study\\personal-web\\amplify\\backend\\api\\personalweb\\schema.graphql",
+    "gqlSchemaPath": "/Users/olivermou/Desktop/personal-web/amplify/backend/api/personalweb/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
-      "expirationTime": 7
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2023-04-04T07:57:51.984Z",
+      "keyDescription": "personalweb"
     },
     "additionalAuthTypes": [
       {
         "mode": "AMAZON_COGNITO_USER_POOLS",
         "cognitoUserPoolId": "authpersonalwebcb2c611f"
       }
-    ]
+    ],
+    "conflictResolution": {}
   }
 }

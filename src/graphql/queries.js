@@ -1,32 +1,30 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getCandidate = /* GraphQL */ `
-  query GetCandidate($id: ID!) {
-    getCandidate(id: $id) {
+export const getNote = /* GraphQL */ `
+  query GetNote($id: ID!) {
+    getNote(id: $id) {
       id
-      name
-      email
       text
       createdAt
       updatedAt
+      owner
     }
   }
 `;
-export const listCandidates = /* GraphQL */ `
-  query ListCandidates(
-    $filter: ModelCandidateFilterInput
+export const listNotes = /* GraphQL */ `
+  query ListNotes(
+    $filter: ModelNoteFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listCandidates(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listNotes(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
-        email
         text
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }

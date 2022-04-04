@@ -1,5 +1,6 @@
 const cn =
 {
+    alittle: "一些",
     about: "关于",
     me: "我",
     home: "主页",
@@ -8,5 +9,8 @@ const cn =
     phone: "电话",
     wechat: "微信",
     email: "邮箱",
+    little: "小",
+    games: "游戏",
+    huarongdao: "华容道",
 }
 export default cn;

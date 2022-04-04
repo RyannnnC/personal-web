@@ -13,7 +13,7 @@
         height: 1000px;
     }
     @media (max-width: $screen-ss-max) {
-        height: 1200px;
+        height: 1600px;
     }
 }
 
@@ -97,4 +97,8 @@
     @include all_center;
     border-bottom: 2px solid cyan;
     height:200px;
+    transition: border-bottom 0.5s ease-in-out;
+    &:hover {
+        border-bottom: 2px solid red;
+    }
 }

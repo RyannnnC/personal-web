@@ -18,10 +18,10 @@ const { t } = useTranslation("translation");
             <Grid container spacing={0}>
                 <Grid item xs={2}/>
                 <Grid item xs={8}>
-                    <h3 className="font-xl centered"> 
+                    <h1 className="centered"> 
                         <span className="font-blue">{t('contact')} </span>
                         {t('me')}
-                    </h3>              
+                    </h1>              
                 </Grid>
                 <Grid item xs={2}/>
             </Grid>

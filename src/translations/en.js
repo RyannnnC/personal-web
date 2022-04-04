@@ -1,5 +1,6 @@
 const en =
 {
+    alittle: "A LITTLE ",
     about: "ABOUT",
     me: "ME",
     home: "HOME",
@@ -8,5 +9,8 @@ const en =
     phone: "PHONE",
     wechat: "WECHAT",
     email: "EMAIL",
+    little: "LITTLE ",
+    games: "GAMES",
+    huarongdao: "Klotski",
 }
 export default en;

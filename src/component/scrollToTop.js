@@ -30,6 +30,7 @@ function ScrollToTop() {
                   backgroundColor: '#fff',
                   border: 0,
                   boxShadow:0,
+                  zIndex:999,
                   opacity:0.5,
                   pr:1,
                   pl:1,

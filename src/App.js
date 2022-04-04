@@ -2,14 +2,21 @@ import { Component } from 'react';
 import Amplify from 'aws-amplify';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
-import Home from './pages/home.js'
-import AboutMe from './pages/aboutme.js'
-import ContactMe from './pages/contactme.js'
+import Index from './pages/index.js';
+import FlappyBird from './component/flappybird';
+import Huarong from './component/huarong';
 import MenuBar from './component/menuBar.js';
 import Footer from './component/footer.js';
 import ScrollToTop from './component/scrollToTop.js'
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 import './App.scss';
 import './i18n.js';
 
@@ -38,17 +45,11 @@ class App extends Component {
   }
 
   render() {
-    
     return (
+    <Router>
       <div>
-        <MenuBar/>
-        <Home/>
-        <AboutMe/>
-        <ContactMe
-          showAlert = {this.showAlert}
-        />
+        <MenuBar/>       
         <ScrollToTop/>
-        <Footer/>
         <Snackbar 
           open={this.state.alertOpen} 
           autoHideDuration={6000} 
@@ -61,7 +62,16 @@ class App extends Component {
             {this.state.alertMsg}
           </Alert>
         </Snackbar>
+        <Routes>
+          <Route path="/" element={<Index
+            showAlert = {this.showAlert}
+          />}/>
+          <Route path='/huarongdao' element={<Huarong/>}/>
+          <Route path='/flappybird' element={<FlappyBird/>}/>
+        </Routes>
+        <Footer/>
       </div>
+    </Router>
     );
   }
 }

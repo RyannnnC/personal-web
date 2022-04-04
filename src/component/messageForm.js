@@ -4,11 +4,22 @@ import {createCandidate} from '../graphql/mutations'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import * as React from 'react';
+import useWidth from '../helpers/detectWidth';
 
 function MessageForm(props)  {
     const [name, setName] = React.useState('')
     const [email, setEmail] = React.useState('')
     const [message, setMessage] = React.useState('')
+    const c_height = useWidth();
+    const [mh, setMh] = React.useState(4);
+
+    React.useEffect(() => {
+        if (c_height === 'xs') {setMh(4)}
+        else if (c_height === 'sm') {setMh(6)}
+        else if (c_height === 'md') {setMh(8)}
+        else if (c_height === 'lg') {setMh(10)}
+        else if (c_height === 'xl') {setMh(12)}
+    },[c_height])
 
     const sendMessage = async () => {
         if (message === '') {
@@ -26,10 +37,10 @@ function MessageForm(props)  {
                 if (response.data) {
                     props.showAlert("success","Successfully sent the Message to Ryan, Thanks!")
                 } else {
-                    props.showAlert("error","Unknown error occur!")
+                    props.showAlert("error",response.errors[0].message)
                 }
             }).catch((error) => {
-                props.showAlert("error","Unknown error occur!")
+                props.showAlert("error",error.errors[0].message)
             })
         }
     }
@@ -62,7 +73,7 @@ function MessageForm(props)  {
                 <TextField 
                 fullWidth 
                 multiline
-                rows={6}
+                rows={mh}
                 id="message" 
                 placeholder="write your message here"
                 label="Message" 

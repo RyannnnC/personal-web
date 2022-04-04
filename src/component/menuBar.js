@@ -28,6 +28,7 @@ class MenuBar extends React.Component {
                 sx={{ 
                   top: '2em',
                   left: '2em',
+                  zIndex: 1001,
                   backgroundColor: '#fff', 
                   border: 0, 
                   boxShadow:0,
@@ -41,7 +42,7 @@ class MenuBar extends React.Component {
                   sx = {{ color: 'black' }}
                   fontSize='large'
                 />
-              </Button>
+            </Button>
         </React.Fragment>
         )
     }
