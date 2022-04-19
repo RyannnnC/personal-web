@@ -86,6 +86,12 @@ function MessageForm(props)  {
             <Button 
                 fullWidth
                 variant="contained"
+                sx={{ 
+                    background: 'linear-gradient(to right, #4b6efc, #6ebffa)',
+                    '&:hover':{
+                      filter: 'brightness(150%)',
+                    }
+                  }}
                 onClick={()=> sendMessage()}>
                 Send Message
             </Button>

@@ -1,0 +1,10 @@
+{
+  "resourceName": "personalData",
+  "tableName": "personaldata",
+  "partitionKey": {
+    "fieldName": "likes",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

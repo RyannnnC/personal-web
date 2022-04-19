@@ -13,11 +13,11 @@ function SimpleMap() {
     const [mh, setMh] = React.useState('200px');
 
     React.useEffect(() => {
-        if (c_height === 'xs') {setMh('200px'); console.log('xs change to ')}
-        else if (c_height === 'sm') {setMh('250px'); console.log('sm change')}
-        else if (c_height === 'md') {setMh('300px'); console.log('md change')}
-        else if (c_height === 'lg') {setMh('350px'); console.log('lg change')}
-        else if (c_height === 'xl') {setMh('400px'); console.log('xl change')}
+        if (c_height === 'xs') {setMh('200px')}
+        else if (c_height === 'sm') {setMh('250px')}
+        else if (c_height === 'md') {setMh('300px')}
+        else if (c_height === 'lg') {setMh('350px')}
+        else if (c_height === 'xl') {setMh('400px')}
     },[c_height])
     
     return (

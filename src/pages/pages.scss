@@ -5,30 +5,17 @@
     @include all_center
 }
 
-.contactme_container {
-    width:100%;
+.contactme_container, .aboutme_container, .blog_container {
     background: #fff;
-    height:800px;
-    @media (max-width: $screen-xs-max) {
-        height: 1000px;
-    }
-    @media (max-width: $screen-ss-max) {
-        height: 1600px;
-    }
 }
 
-.aboutme_container {
-    width:100%;
-    background: #000;
-    height:600px;
-    @media (max-width: $screen-xs-max) {
-        height: 800px;
-    }
-    @media (max-width: $screen-ss-max) {
-        height: 900px;
-    }
+.career_container{
+    background: $r-grey;
 }
 
+.games_container{
+    background: linear-gradient(to right, $r-blue3, $r-blue4);
+}
 .home_container{
     width:100%;
     background: url('../assets/home-bg.jpg');
@@ -42,6 +29,7 @@
         height: 400px;
     }
 }
+
 
 .responsive_row {
     @media (max-width: $screen-xs-max) {
@@ -95,10 +83,33 @@
     padding-top: 20px;
     padding-bottom: 20px;
     @include all_center;
-    border-bottom: 2px solid cyan;
+    border-bottom: 3px solid cyan;
+    border-radius: 10px;
     height:200px;
     transition: border-bottom 0.5s ease-in-out;
     &:hover {
-        border-bottom: 2px solid red;
+        border-bottom: 3px solid red;
     }
+}
+
+.game_card {
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        padding-top: 0;
+    }
+}
+
+.game_bg {
+    width:100%;
+    filter: grayscale(100%);
+}
+
+.game_bg:hover {
+    filter: none;
+}
+
+.img_wrap {
+    border: 2px solid $r-blue3;
+    border-radius: 15px;
+    overflow: hidden;
 }

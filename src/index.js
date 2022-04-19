@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {store, updateFrame, birdjump, game, states, rungame } from './helpers/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App store={store} updateFrame={updateFrame} game={game} stats={states} rungame={rungame} birdjump={birdjump}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

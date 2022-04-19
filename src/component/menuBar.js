@@ -23,23 +23,22 @@ class MenuBar extends React.Component {
             <Container maxWidth='false' className='header' menu-open={this.state.open.toString()}>
             </Container>
             <Button 
-                className='buttonIcon'
-                variant="contained"
+                variant="outlined"
                 sx={{ 
                   top: '2em',
                   left: '2em',
                   zIndex: 1001,
-                  backgroundColor: '#fff', 
+                  background: 'linear-gradient(to right, #4b6efc, #6ebffa)', 
                   border: 0, 
                   boxShadow:0,
                   position: 'fixed', 
                   '&:hover':{
-                    backgroundColor:'#fff',
+                    filter: 'brightness(150%)',
                   }
                 }}
                 onClick={()=>this.setState({open:!this.state.open})}>
                 <MenuIcon
-                  sx = {{ color: 'black' }}
+                  sx = {{ color: 'white' }}
                   fontSize='large'
                 />
             </Button>

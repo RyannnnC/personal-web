@@ -16,7 +16,7 @@ class Footer extends React.Component {
         return (
         <React.Fragment>
         <Container maxWidth='false' className='footer'>
-            <p style={{ fontWeight: "normal", color: "#ffffff", margin:0 }}>
+            <p style={{ fontWeight: "normal", color: "black", margin:0 }}>
               Powered by Ryan Cai @ 2022
             </p>
         </Container>

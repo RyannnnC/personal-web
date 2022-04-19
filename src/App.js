@@ -3,8 +3,9 @@ import Amplify from 'aws-amplify';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
 import Index from './pages/index.js';
-import FlappyBird from './component/flappybird';
+import {FlappyBird} from './component/flappybird';
 import Huarong from './component/huarong';
+import Genshin from './component/genshin';
 import MenuBar from './component/menuBar.js';
 import Footer from './component/footer.js';
 import ScrollToTop from './component/scrollToTop.js'
@@ -67,7 +68,8 @@ class App extends Component {
             showAlert = {this.showAlert}
           />}/>
           <Route path='/huarongdao' element={<Huarong/>}/>
-          <Route path='/flappybird' element={<FlappyBird/>}/>
+          <Route path='/flappybird' element={<FlappyBird store={this.props.store} updateFrame={this.props.updateFrame} game={this.props.game} stats={this.props.stats} rungame={this.props.rungame} birdjump={this.props.birdjump}/>}/>
+          <Route path='/genshin' element={<Genshin/>}/>
         </Routes>
         <Footer/>
       </div>

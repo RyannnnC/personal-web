@@ -5,14 +5,14 @@ import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import EmailIcon from '@mui/icons-material/Email';
 import { WechatOutlined } from '@ant-design/icons';
 import Divider from '@mui/material/Divider';
-import './home.scss'
+import './pages.scss'
 import SimpleMap from '../component/map'
 import MessageForm from '../component/messageForm'
 
-
 function ContactMe (props) {
-const { t } = useTranslation("translation");
-   return (
+    const { t } = useTranslation("translation");
+
+    return (
     <React.Fragment>
         <Container maxWidth='false' className='contactme_container'>
             <Grid container spacing={0}>
@@ -51,7 +51,11 @@ const { t } = useTranslation("translation");
                         pt:0
                     },
                 }}>
-                    <div className="contact_box">
+                    <div className="contact_box"
+                    onClick={(e) => {
+                        window.location.href = "tel:+61416502123";
+                        e.preventDefault();
+                    }}>
                         <PhoneIphoneIcon fontSize="large"/>
                         <h5>
                             {t('phone')}
@@ -69,7 +73,11 @@ const { t } = useTranslation("translation");
                         pt:0
                     },
                 }}>
-                    <div className="contact_box">
+                    <div className="contact_box" 
+                    onClick={(e) => {
+                        window.location.href = "mailto:qq398268537@gmail.com";
+                        e.preventDefault();
+                    }}>
                         <EmailIcon fontSize="large"/>
                         <h5>
                             {t('email')}

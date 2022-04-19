@@ -12,5 +12,10 @@ const en =
     little: "LITTLE ",
     games: "GAMES",
     huarongdao: "Klotski",
+    memory: "Memory Game",
+    newGame: "New Game",
+    turns: "Turns",
+    my: "My ",
+    career: "Career",
 }
 export default en;

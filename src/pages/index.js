@@ -1,15 +1,17 @@
 import Home from './home.js'
 import AboutMe from './aboutme.js'
 import ContactMe from './contactme.js'
-import Projects from './projects';
+import Career from './career';
 import Games from './games';
+import Blog from './blog';
 
 function Index(props) {
       return (
         <div>
             <Home/>
             <AboutMe/>
-            <Projects/>
+            <Career/>
+            <Blog/>
             <Games/>
             <ContactMe
                 showAlert = {props.showAlert}

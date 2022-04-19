@@ -1,3 +1,15 @@
+@import '../theme.scss';
+
+.centered {
+    @include all_center
+}
+
+.game_container {
+    width: 100%;
+    height: calc(100vh - 50px);
+    @include all_center
+}
+
 .header{
     position:fixed;
     top:0;
@@ -26,4 +38,63 @@
     padding-bottom: 10px;
     margin:0;
     text-align: center;
+    background-color: $r-grey;
+}
+
+.fakecanvas {
+    border: 1px solid #000;
+    height: 480px;
+    width:320px;
+    overflow: hidden;
+    position: relative;
+    background-color: #70c5cf;
+}
+
+.newGame {
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    width: 7rem;
+    height: 3rem;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.newGame:hover {
+    filter: brightness(0.7);
+    cursor: pointer;
+}
+
+.gamep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    font-family: monospace;
+    font-size: 1.5rem;
+    background-color: black;
+    border: 2px solid white;
+    width: 10rem;
+    height: 4rem;
+}
+
+.grid {
+    height: 600px;
+    width: 600px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.card_img {
+    position: absolute; /* Take your picture out of the flow */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; /* Make the picture taking the size of it's parent */
+    width: 100%; /* This if for the object-fit */
+    height: 100%; /* This if for the object-fit */
+    object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+    object-position: center;
 }

@@ -12,5 +12,10 @@ const cn =
     little: "小",
     games: "游戏",
     huarongdao: "华容道",
+    memory: "记忆小游戏",
+    newGame: "新游戏",
+    turns: "次数",
+    my: "我的",
+    career: "生涯",
 }
 export default cn;

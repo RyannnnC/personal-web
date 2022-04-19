@@ -1,17 +1,9 @@
 import * as React from 'react';
 import { Container, Grid } from '@mui/material';
-import './home.scss'
+import './pages.scss'
 
 
 class Home extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { };
-    }
-
-    componentDidMount() {
-
-    }
 
     render() {
         return (
@@ -31,7 +23,7 @@ class Home extends React.Component {
                             I
                         </span>
                     </h1>
-                    <h3 className="font-blue font-xl subtitle"/>
+                    <h3 className="font-white font-xl subtitle"/>
                 </Grid>
                 <Grid item xs={2}/>
               </Grid>
