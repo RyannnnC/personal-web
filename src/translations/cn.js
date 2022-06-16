@@ -17,5 +17,20 @@ const cn =
     turns: "次数",
     my: "我的",
     career: "生涯",
+    professional: "专业",
+    skills: "技能",
+    blog: "笔记",
+    aicare: "AICare Health",
+    bcuworld: "BCU World",
+
+    feDevelopment: "前端开发",
+    feDescription: "精通HTML+CSS基本布局以及HTML5+CSS3新属性，根据设计图完成页面制作。熟悉React框架，能够熟练运用React框架去开发网页应用，以及React Native去开发移动端应用。",
+    pLanguage: "编程语言",
+    pDescription: "熟悉流行的编程语言，包括Python, C, Java 和 Javascript。了解脚本语言Shell Script 和 Perl。了解基本的汇编语言如MIPS。",
+    tAndFrameworks: "工具与框架",
+    tfDescription: "熟练使用UI框架如Bootstrap， Material UI，Ant Design去开发响应式页面。熟练使用git版本控制工具，进行代码管理以及版本更迭。了解node.js，利用其搭建简单的后端服务器。",
+    pSolving: "解决问题",
+    psDescription: "熟练使用各种算法，如排序算法，数据结构，图论等去解决各种问题。熟悉软件设计模式，如工厂模式，观察者模式，解释器模式，策略模式，模板模式等，软件开发时遵循这些开发原则和规范。",
+
 }
 export default cn;

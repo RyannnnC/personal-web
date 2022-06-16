@@ -15,6 +15,7 @@ function ContactMe (props) {
     return (
     <React.Fragment>
         <Container maxWidth='false' className='contactme_container'>
+            <Container maxWidth='xl'>
             <Grid container spacing={0}>
                 <Grid item xs={2}/>
                 <Grid item xs={8}>
@@ -99,6 +100,7 @@ function ContactMe (props) {
                     />
                 </Grid>
             </Grid>
+            </Container>
         </Container>
     </React.Fragment>
     )

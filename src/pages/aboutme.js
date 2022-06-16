@@ -13,6 +13,7 @@ function AboutMe () {
         return (
         <React.Fragment>
             <Container maxWidth='false' className='aboutme_container'>
+                <Container maxWidth='xl'>
                 <Grid container spacing={0} p={4}>
                     <Grid item xs={12} md={6} p={4} className="centered">
                         <img
@@ -50,7 +51,7 @@ function AboutMe () {
                         </Grid>
                     </Grid>
                 </Grid>
-                
+                </Container>
             </Container>
         </React.Fragment>
         )

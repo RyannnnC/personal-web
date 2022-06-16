@@ -1,8 +1,8 @@
 {
-  "resourceName": "personalData",
-  "tableName": "personaldata",
+  "resourceName": "likeTable",
+  "tableName": "likeTable",
   "partitionKey": {
-    "fieldName": "likes",
+    "fieldName": "id",
     "fieldType": "number"
   },
   "gsi": [],

@@ -17,6 +17,7 @@ function Games(props) {
     return (
         <React.Fragment>
             <Container maxWidth='false' className='games_container'>
+              <Container maxWidth='xl'>
               <Grid container spacing={0}>
                 <Grid item xs={12}>
                     <h1 className="centered font-white"> 
@@ -30,7 +31,7 @@ function Games(props) {
                     ":hover": {
                         pt:0
                     },
-                }} className="game_card" item xs={10} md={4} onClick={() => gotoGame("huarongdao")}>
+                }} className="game_card" item xs={12} sm={4} onClick={() => gotoGame("huarongdao")}>
                     <img src={genshin} className="game_bg"/>
                     <h2 className="centered font-white"> 
                         {t('huarongdao')}  
@@ -40,7 +41,7 @@ function Games(props) {
                     ":hover": {
                         pt:0
                     },
-                }} className="game_card" item xs={10} md={4} onClick={() => gotoGame("flappybird")}>
+                }} className="game_card" item xs={12} sm={4} onClick={() => gotoGame("flappybird")}>
                     <img src={flappy} className="game_bg"/>
                     <h2 className="centered font-white"> 
                         Flappy Bird 
@@ -50,13 +51,14 @@ function Games(props) {
                     ":hover": {
                         pt:0
                     },
-                }} className="game_card" item xs={10} md={4} onClick={() => gotoGame("genshin")}>
+                }} className="game_card" item xs={12} sm={4} onClick={() => gotoGame("genshin")}>
                     <img src={genshin} className="game_bg"/>
                     <h2 className="centered font-white"> 
                         {t('memory')}  
                     </h2> 
                 </Grid>
               </Grid>
+              </Container>
             </Container>
         </React.Fragment>
     )

@@ -17,5 +17,20 @@ const en =
     turns: "Turns",
     my: "My ",
     career: "Career",
+    professional: "Professional",
+    skills: "Skills",
+    blog: "Blog",
+    aicare: "AICare Health",
+    bcuworld: "BCU World",
+
+    feDevelopment: "Front End Development",
+    feDescription: "Familiar with HTML+CSS basic layout and HTML5+CSS3 new attributes, complete the page builds based on design sketch. Familiar with React framework, proficiently use ReactJS to develop web applications and React Native to develop mobile applications.",
+    pLanguage: "Programming Languages",
+    pDescription: "Familiar with popular programming languages, including Python, C, Java and Javascript. Familiar with Shell Script and Perl. Understand basic assembly language such as MIPS.",
+    tAndFrameworks: "Tools and Frameworks",
+    tfDescription: "Familiar with UI frameworks such as Bootstrap, Material UI, Ant Design to develop responsive web pages. Familiar with Git version control tools for managing code and versioning. Understand node.js, being able to build a simple backend server.",
+    pSolving: "Problem Solving",
+    psDescription: "Familiar with the data structures and algorithms, including sorting, searching, recursion, greedy algorithms, etc. Familiar with the popular software design patterns, such as singleton, factory, observer. Follow these principles and rules when developing software.",
+
 }
 export default en;

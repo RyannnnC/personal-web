@@ -5,11 +5,11 @@
     @include all_center
 }
 
-.contactme_container, .aboutme_container, .blog_container {
+.contactme_container, .blog_container, .skills_container {
     background: #fff;
 }
 
-.career_container{
+.aboutme_container, .career_container{
     background: $r-grey;
 }
 
@@ -112,4 +112,35 @@
     border: 2px solid $r-blue3;
     border-radius: 15px;
     overflow: hidden;
+    padding: 0;
+}
+
+.icon_container {
+    width: 180px;
+    height: 180px;
+    line-height: 185px;
+    border-radius: 50%;
+    border: 1px solid $r-blue;
+    color: $r-blue;
+    font-size: 60px;
+    text-align: center;
+    transition: all .3s ease-out;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    &:hover {
+        background-color: $r-blue;
+        font-size: 65px;
+        color: #fff;
+    }
+}
+
+.skill_container{
+    justify-content: center;
+    text-align: center;
+}
+
+.skill_description {
+    text-align:justify;
+    margin: auto;
+    max-width: 350px;
 }

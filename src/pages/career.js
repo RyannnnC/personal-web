@@ -11,7 +11,8 @@ function Career(props) {
 
     return (
         <React.Fragment>
-            <Container maxWidth='false' className='career_container' sx={{pt:4, pb:4}}>
+            <Container  maxWidth="false" className='career_container'>
+                <Container maxWidth='xl'>
                 <Grid container spacing={0} >
                     <Grid item xs={2}/>
                     <Grid item xs={8}>
@@ -22,11 +23,11 @@ function Career(props) {
                     </Grid>
                     <Grid item xs={2}/>
                 </Grid>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} md={6} className="img_wrap" sx={{p:0,m:0}}>
-                        <img src={aicare} style={{width: "100%", backgroundColor:'#fff'}}/>
+                <Grid container spacing={2} p={2}>
+                    <Grid xs={12} md={6} className="img_wrap" sx={{p:0,m:0}}>
+                        <img src={aicare} style={{width: "100%",height: '100%', backgroundColor:'#fff'}}/>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} pt={2} pb={2}>
                         <h4 className="font-bold">
                             {t('aicare')}
                         </h4>  
@@ -39,7 +40,7 @@ function Career(props) {
                             Learn More    
                         </Button> 
                     </Grid> 
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} pt={2} pb={2} >
                         <h4 className="font-bold">
                             {t('bcuworld')}
                         </h4> 
@@ -52,10 +53,11 @@ function Career(props) {
                             Learn More    
                         </Button> 
                     </Grid>
-                    <Grid item xs={12} md={6} className="img_wrap" sx={{p:0,m:0}}>
-                        <img src={bcuworld} style={{width: "100%", backgroundColor: '#fff'}}/>
+                    <Grid xs={12} md={6} className="img_wrap" sx={{p:0,m:0}}>
+                        <img src={bcuworld} style={{width: "100%", height: '100%',backgroundColor: '#fff'}}/>
                     </Grid>
                 </Grid>
+                </Container>
             </Container>
         </React.Fragment>
     )

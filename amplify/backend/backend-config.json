@@ -49,13 +49,26 @@
           ]
         }
       }
+    },
+    "likeapi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "likefunc",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
     }
   },
   "hosting": {
     "amplifyhosting": {
       "service": "amplifyhosting",
-      "type": "cicd",
-      "lastPushTimeStamp": "2022-02-18T02:34:18.899Z"
+      "type": "cicd"
     }
   },
   "function": {
@@ -74,14 +87,14 @@
         }
       ]
     },
-    "likeLambda": {
+    "likefunc": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
       "dependsOn": [
         {
           "category": "storage",
-          "resourceName": "personalData",
+          "resourceName": "likeTable",
           "attributes": [
             "Name",
             "Arn"
@@ -95,7 +108,7 @@
     }
   },
   "storage": {
-    "personalData": {
+    "likeTable": {
       "service": "DynamoDB",
       "providerPlugin": "awscloudformation"
     }

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/likes": {
+      "name": "/likes",
+      "lambdaFunction": "likefunc",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
