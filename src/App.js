@@ -8,7 +8,7 @@ import Huarong from './component/huarong';
 import Genshin from './component/genshin';
 import MenuBar from './component/menuBar.js';
 import Footer from './component/footer.js';
-import ScrollToTop from './component/scrollToTop.js'
+// import ScrollToTop from './component/scrollToTop.js'
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
@@ -50,7 +50,7 @@ class App extends Component {
     <Router>
       <div>
         <MenuBar/>       
-        <ScrollToTop/>
+        {/* <ScrollToTop/> */}
         <Snackbar 
           open={this.state.alertOpen} 
           autoHideDuration={6000} 
@@ -69,7 +69,7 @@ class App extends Component {
           />}/>
           <Route path='/huarongdao' element={<Huarong/>}/>
           <Route path='/flappybird' element={<FlappyBird store={this.props.store} updateFrame={this.props.updateFrame} game={this.props.game} stats={this.props.stats} rungame={this.props.rungame} birdjump={this.props.birdjump}/>}/>
-          <Route path='/genshin' element={<Genshin/>}/>
+          <Route path='/memory' element={<Genshin/>}/>
         </Routes>
         <Footer/>
       </div>

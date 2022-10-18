@@ -10,16 +10,16 @@ function MessageForm(props)  {
     const [name, setName] = React.useState('')
     const [email, setEmail] = React.useState('')
     const [message, setMessage] = React.useState('')
-    const c_height = useWidth();
+    const c_width = useWidth();
     const [mh, setMh] = React.useState(4);
 
     React.useEffect(() => {
-        if (c_height === 'xs') {setMh(4)}
-        else if (c_height === 'sm') {setMh(6)}
-        else if (c_height === 'md') {setMh(8)}
-        else if (c_height === 'lg') {setMh(10)}
-        else if (c_height === 'xl') {setMh(12)}
-    },[c_height])
+        if (c_width === 'xs') {setMh(4)}
+        else if (c_width === 'sm') {setMh(6)}
+        else if (c_width === 'md') {setMh(8)}
+        else if (c_width === 'lg') {setMh(10)}
+        else if (c_width === 'xl') {setMh(12)}
+    },[c_width])
 
     const sendMessage = async () => {
         if (message === '') {

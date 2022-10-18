@@ -9,6 +9,27 @@ import './pages.scss'
 import SimpleMap from '../component/map'
 import MessageForm from '../component/messageForm'
 
+const contacts = {
+    wechat: {
+        name: 'wechat',
+        icon: <WechatOutlined style={{ fontSize:35}}/>,
+        url: null,
+        content: '398268537',
+    },
+    phone: {
+        name: 'phone',
+        icon: <PhoneIphoneIcon fontSize='large'/>,
+        url: 'tel:+61416502123',
+        content: '+61 416 502 123',
+    },
+    email: {
+        name: 'email',
+        icon: <EmailIcon fontSize='large'/>,
+        url: 'mailto:qq398268537@gmail.com',
+        content: 'qq398268537@gmail.com',
+    },
+}
+
 function ContactMe (props) {
     const { t } = useTranslation("translation");
 
@@ -27,68 +48,33 @@ function ContactMe (props) {
                 <Grid item xs={2}/>
             </Grid>
             <Grid container spacing={2} p={2} mt={2} mb={4} column={{xs:4, sm:8, md:12}}>
-                <Grid className="contact_move" item xs={12} sm={4}
-                sx={{
-                    transition: 'all 0.5s ease-in-out',
-                    ":hover": {
-                        pt:0
-                    },
-                }}>
-                    <div className="contact_box">
-                        <WechatOutlined style={{ fontSize:35}}/>
-                        <h5>
-                            {t('wechat')}
-                        </h5>
-                        <Divider variant="middle"/>
-                        <h5>
-                            qq398268537            
-                        </h5>
-                    </div>
-                </Grid>
-                <Grid className="contact_move" item xs={12} sm={4}
-                sx={{
-                    transition: 'all 0.5s ease-in-out',
-                    ":hover": {
-                        pt:0
-                    },
-                }}>
-                    <div className="contact_box"
-                    onClick={(e) => {
-                        window.location.href = "tel:+61416502123";
-                        e.preventDefault();
-                    }}>
-                        <PhoneIphoneIcon fontSize="large"/>
-                        <h5>
-                            {t('phone')}
-                        </h5>
-                        <Divider variant="middle"/>
-                        <h5>
-                            +61-416502123
-                        </h5>
-                    </div>            
-                </Grid>
-                <Grid className="contact_move" item xs={12} sm={4}
-                sx={{
-                    transition: 'all 0.5s ease-in-out',
-                    ":hover": {
-                        pt:0
-                    },
-                }}>
-                    <div className="contact_box" 
-                    onClick={(e) => {
-                        window.location.href = "mailto:qq398268537@gmail.com";
-                        e.preventDefault();
-                    }}>
-                        <EmailIcon fontSize="large"/>
-                        <h5>
-                            {t('email')}
-                        </h5>
-                        <Divider variant="middle"/>
-                        <h5>
-                            qq398268537@gmail.com
-                        </h5>
-                    </div>
-                </Grid>
+                {Object.values(contacts).map((contact, index) => {
+                    return (
+                        <Grid className="contact_move" item xs={12} sm={4} key={'contact' + index}
+                            sx={{
+                                transition: 'all 0.5s ease-in-out',
+                                ":hover": {
+                                    pt:0
+                                },
+                            }}>
+                            <div className="contact_box" onClick={(e) => {
+                                if (contact.url) {
+                                    window.location.href = contact.url;
+                                    e.preventDefault();
+                                }
+                            }}>
+                                {contact.icon}
+                                <h5>
+                                    {t(contact.name)}
+                                </h5>
+                                <Divider variant="middle"/>
+                                <h5>
+                                   {contact.content}        
+                                </h5>
+                            </div>
+                        </Grid>
+                    )
+                })}
             </Grid>
             <Grid className="responsive_row" container spacing={2} p={2}>
                 <Grid item xs={12} sm={6}>

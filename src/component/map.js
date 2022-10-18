@@ -9,16 +9,16 @@ const center = {
 };
   
 function SimpleMap() {
-    const c_height = useWidth();
+    const c_width = useWidth();
     const [mh, setMh] = React.useState('200px');
 
     React.useEffect(() => {
-        if (c_height === 'xs') {setMh('200px')}
-        else if (c_height === 'sm') {setMh('250px')}
-        else if (c_height === 'md') {setMh('300px')}
-        else if (c_height === 'lg') {setMh('350px')}
-        else if (c_height === 'xl') {setMh('400px')}
-    },[c_height])
+        if (c_width === 'xs') {setMh('200px')}
+        else if (c_width === 'sm') {setMh('250px')}
+        else if (c_width === 'md') {setMh('300px')}
+        else if (c_width === 'lg') {setMh('350px')}
+        else if (c_width === 'xl') {setMh('400px')}
+    },[c_width])
     
     return (
       <LoadScript

@@ -35,7 +35,7 @@ export class bird extends baseObj{
   //Static properties which dont change over time
   animation = [0, 1, 2, 1]; // animation sequence
   radius = 12;
-  gravity = 0.20;
+  gravity = 0.18;
   _jump = 4.6;
 }
 

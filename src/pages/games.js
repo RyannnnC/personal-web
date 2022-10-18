@@ -6,6 +6,21 @@ import { useNavigate } from "react-router-dom";
 import genshin from "../assets/genshinbg.png";
 import flappy from "../assets/flappybird.jpeg";
 
+const games = {
+    huarongdao: {
+        title: 'huarongdao',
+        image: genshin,
+    },
+    flappybird: {
+        title: 'flappybird',
+        image: flappy,
+    },
+    genshin: {
+        title: 'memory',
+        image: genshin,
+    },
+}
+
 function Games(props) {
     const { t } = useTranslation("translation");
     let navigate = useNavigate();
@@ -27,36 +42,20 @@ function Games(props) {
                 </Grid>
               </Grid>
               <Grid container spacing={1}>
-                <Grid sx={{
-                    ":hover": {
-                        pt:0
-                    },
-                }} className="game_card" item xs={12} sm={4} onClick={() => gotoGame("huarongdao")}>
-                    <img src={genshin} className="game_bg"/>
-                    <h2 className="centered font-white"> 
-                        {t('huarongdao')}  
-                    </h2> 
-                </Grid>
-                <Grid sx={{
-                    ":hover": {
-                        pt:0
-                    },
-                }} className="game_card" item xs={12} sm={4} onClick={() => gotoGame("flappybird")}>
-                    <img src={flappy} className="game_bg"/>
-                    <h2 className="centered font-white"> 
-                        Flappy Bird 
-                    </h2> 
-                </Grid>
-                <Grid sx={{
-                    ":hover": {
-                        pt:0
-                    },
-                }} className="game_card" item xs={12} sm={4} onClick={() => gotoGame("genshin")}>
-                    <img src={genshin} className="game_bg"/>
-                    <h2 className="centered font-white"> 
-                        {t('memory')}  
-                    </h2> 
-                </Grid>
+                {Object.values(games).map((game, index) => {
+                    return(
+                        <Grid sx={{
+                            ":hover": {
+                                pt:0
+                            },
+                        }} className="game_card" item xs={12} sm={12/Object.values(games).length} onClick={() => gotoGame(game.title)}>
+                            <img src={game.image} className="game_bg" alt={game.title}/>
+                            <h2 className="centered font-white"> 
+                                {t(game.title)}  
+                            </h2> 
+                        </Grid>
+                    )
+                })}
               </Grid>
               </Container>
             </Container>

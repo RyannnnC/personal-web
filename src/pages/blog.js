@@ -24,7 +24,7 @@ function Blog(props) {
                 <Grid container spacing={0} >
                     <Grid item xs={2}/>
                     <Grid item xs={8}>
-                        <h1 className="centered font-white"> 
+                        <h1 className="centered"> 
                             {t('my')} 
                             <span className="font-blue">Blogs </span>
                         </h1>           
