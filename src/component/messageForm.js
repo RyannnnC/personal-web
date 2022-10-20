@@ -4,7 +4,7 @@ import {createCandidate} from '../graphql/mutations'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import * as React from 'react';
-import useWidth from '../helpers/detectWidth';
+import useWidth from '../helpers/useWidth';
 
 function MessageForm(props)  {
     const [name, setName] = React.useState('')
@@ -14,7 +14,7 @@ function MessageForm(props)  {
     const [mh, setMh] = React.useState(4);
 
     React.useEffect(() => {
-        if (c_width === 'xs') {setMh(4)}
+        if (c_width === 'xs') {setMh(6)}
         else if (c_width === 'sm') {setMh(6)}
         else if (c_width === 'md') {setMh(8)}
         else if (c_width === 'lg') {setMh(10)}

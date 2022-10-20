@@ -37,12 +37,12 @@ function MySkill(props) {
         <React.Fragment>
             <Container sx={{p:0}} maxWidth='false' className='skills_container'>
                 <Container maxWidth='xl'>
-                <Grid container spacing={0} >
+                <Grid container spacing={0} pt={3}>
                     <Grid item xs={2}/>
                     <Grid item xs={8}>
-                        <h1 className="centered"> 
-                            Professional
-                            <span className="font-blue"> Skills</span>
+                        <h1 className="centered font-bold"> 
+                            {t('professional')}
+                            <span className="font-blue"> {t('skills')}</span>
                         </h1>           
                     </Grid>
                     <Grid item xs={2}/>

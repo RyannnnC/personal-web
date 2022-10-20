@@ -1,7 +1,7 @@
 import {bg, fg, bird, pipe} from './asset'
-import { width, height} from './detectWidth';
+import { width, height} from './useWidth';
 import { bg_h, bg_w, fg_h, fg_w, pipe_h, pipe_w, bird_h, bird_w } from '../component/sprite';
-import {action, observable , useStrict} from 'mobx'
+import {action, observable } from 'mobx'
 
 const bg1 = new bg(guid(), 0, height - bg_h)
 const bg2 = new bg(guid(), bg_w, height - bg_h)

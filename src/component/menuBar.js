@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Drawer, List, ListItem, ListItemText, ListItemIcon, ListItemButton, Button  } from '@mui/material';
+import { Drawer, List, ListItem, ListItemText, ListItemIcon, ListItemButton, Button  } from '@mui/material';
 import { 
   Menu,
   Home,
@@ -11,7 +11,8 @@ import {
   Call
 } from '@mui/icons-material';
 import './component.scss'
-import useWidth from '../helpers/detectWidth';
+import useWidth from '../helpers/useWidth';
+import useScrollPosition from '../helpers/useScrollPosition';
 
 const menuOptions = {
     home: {
@@ -47,11 +48,26 @@ const menuOptions = {
 function MenuBar (props) {
     const [open, setOpen] = React.useState(false);
     const c_width = useWidth();
-    const [selected, setSelected] = React.useState('home');
+    const [selected, setSelected] = React.useState('Home');
+    const scrollPosition = useScrollPosition();
 
     React.useEffect(() => {
-      console.log('scroll to', window.scrollY);
-    },[window.scrollY])
+        if (scrollPosition < 400) {
+          setSelected('Home');
+        } else if (scrollPosition < 1000) {
+          setSelected('About');
+        } else if (scrollPosition < 2000) {
+          setSelected('Skills');
+        } else if (scrollPosition < 2800) {
+          setSelected('Career');
+        } else if (scrollPosition < 3200) {
+          setSelected('Blogs');
+        } else if (scrollPosition < 3600) {
+          setSelected('Games');
+        } else {
+          setSelected('Contacts');
+        }
+    }, [scrollPosition]);
 
     return (
       <React.Fragment key='left'>
@@ -65,8 +81,8 @@ function MenuBar (props) {
                 {Object.values(menuOptions).map((option,index) => {
                     return (
                       <ListItem key={"menuItem" + index}>
-                        <ListItemButton>
-                          <ListItemIcon>
+                        <ListItemButton selected={option.name === selected }>
+                          <ListItemIcon sx={{minWidth: 0}}>
                             {option.icon}
                           </ListItemIcon>
                           <ListItemText primary={option.name} />
@@ -84,8 +100,8 @@ function MenuBar (props) {
                 {Object.values(menuOptions).map((option,index) => {
                     return (
                       <ListItem key={"menuItem" + index} sx={{display: open ? "flex" : "none" }}>
-                        <ListItemButton sx={{flexDirection:"column"}}>
-                          <ListItemIcon>
+                        <ListItemButton sx={{flexDirection:"column"}} selected={option.name === selected }>
+                          <ListItemIcon sx={{minWidth: 0}}>
                             {option.icon}
                           </ListItemIcon>
                           <ListItemText primary={option.name} />

@@ -34,10 +34,10 @@ function Career(props) {
         <React.Fragment>
             <Container  maxWidth="false" className='career_container'>
                 <Container maxWidth='xl'>
-                <Grid container spacing={0} >
+                <Grid container spacing={0} pt={3}>
                     <Grid item xs={2}/>
                     <Grid item xs={8}>
-                        <h1 className="centered"> 
+                        <h1 className="centered font-bold"> 
                             {t('my')} 
                             <span className="font-blue">{t('career')} </span>
                         </h1>           
@@ -48,14 +48,14 @@ function Career(props) {
                     {Object.values(careers).map((career, index) => {
                         if (index % 2 === 0) {
                             return(
-                                <Grid container item spacing={2}>
+                                <Grid container item spacing={2} pt={2} pb={2}>
                                     <Grid xs={12} md={6} className="img_wrap">
                                         <img src={career.image} style={{width: "100%",height: '100%', backgroundColor:'#fff'}} alt={career.title}/>
                                     </Grid>
-                                    <Grid item xs={12} md={6} pt={2} pb={2}>
-                                        <h4 className="font-bold">
+                                    <Grid item xs={12} md={6} >
+                                        <h3 className="font-bold">
                                             {t(career.title)}
-                                        </h4>  
+                                        </h3>  
                                         <Divider sx={{width: '10%', mt:2, mb:2, borderColor:'#000'}}/>
                                         <Button variant="outlined" sx={{color: '#4b6efc'}}
                                         onClick={(e) => {
@@ -69,11 +69,11 @@ function Career(props) {
                             )
                         } else {
                             return (
-                                <Grid container item spacing={2}>
-                                    <Grid item xs={12} md={6} pt={2} pb={2} >
-                                        <h4 className="font-bold">
+                                <Grid container item spacing={2} pt={2} pb={2} >
+                                    <Grid item xs={12} md={6} pb={2}>
+                                        <h3 className="font-bold">
                                             {t(career.title)}
-                                        </h4> 
+                                        </h3> 
                                         <Divider sx={{width: '10%', mt:2, mb:2, borderColor:'#000'}}/>
                                         <Button variant="outlined" sx={{color: '#4b6efc'}} 
                                         onClick={(e) => {

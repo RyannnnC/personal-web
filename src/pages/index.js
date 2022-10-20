@@ -4,7 +4,7 @@ import ContactMe from './contactme.js'
 import Career from './career';
 import Games from './games';
 import Blog from './blog';
-import Like from '../component/like'
+// import Like from '../component/like'
 import MySkill from './mySkill.js';
 
 function Index(props) {

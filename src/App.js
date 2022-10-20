@@ -11,6 +11,7 @@ import Footer from './component/footer.js';
 // import ScrollToTop from './component/scrollToTop.js'
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
+import "antd/dist/antd.css";
 
 import {
   BrowserRouter as Router,

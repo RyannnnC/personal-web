@@ -1,72 +1,15 @@
 {
-    "dev": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-personalweb-dev-221600-authRole",
-            "UnauthRoleArn": "arn:aws:iam::820121272120:role/amplify-personalweb-dev-221600-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::820121272120:role/amplify-personalweb-dev-221600-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-personalweb-dev-221600-deployment",
-            "UnauthRoleName": "amplify-personalweb-dev-221600-unauthRole",
-            "StackName": "amplify-personalweb-dev-221600",
-            "StackId": "arn:aws:cloudformation:us-east-1:820121272120:stack/amplify-personalweb-dev-221600/d5ceb190-8f19-11ec-9424-0ea201c9d581",
-            "AmplifyAppId": "d31ntaeatfps2g"
-        },
-        "categories": {
-            "auth": {
-                "personalwebcb2c611f": {}
-            },
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d31ntaeatfps2g",
-                    "type": "cicd"
-                }
-            },
-            "function": {
-                "sendEmail": {
-                    "deploymentBucketName": "amplify-personalweb-dev-221600-deployment",
-                    "s3Key": "amplify-builds/sendEmail-6431336b4d486348596a-build.zip",
-                    "sesEmail": "qq398268537@gmail.com"
-                },
-                "likefunc": {
-                    "deploymentBucketName": "amplify-personalweb-dev-221600-deployment",
-                    "s3Key": "amplify-builds/likefunc-53787444413368302f4a-build.zip"
-                }
-            }
-        }
-    },
-    "production": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-personalweb-production-170119-authRole",
-            "UnauthRoleArn": "arn:aws:iam::820121272120:role/amplify-personalweb-production-170119-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::820121272120:role/amplify-personalweb-production-170119-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-personalweb-production-170119-deployment",
-            "UnauthRoleName": "amplify-personalweb-production-170119-unauthRole",
-            "StackName": "amplify-personalweb-production-170119",
-            "StackId": "arn:aws:cloudformation:us-east-1:820121272120:stack/amplify-personalweb-production-170119/2085bf90-4de1-11ed-97f4-0a150f0f08bf",
-            "AmplifyAppId": "d31ntaeatfps2g"
-        },
-        "categories": {
-            "auth": {
-                "personalwebcb2c611f": {}
-            },
-            "function": {
-                "sendEmail": {
-                    "deploymentBucketName": "amplify-personalweb-dev-221600-deployment",
-                    "s3Key": "amplify-builds/sendEmail-6431336b4d486348596a-build.zip",
-                    "sesEmail": "qq398268537@gmail.com"
-                },
-                "likefunc": {
-                    "deploymentBucketName": "amplify-personalweb-dev-221600-deployment",
-                    "s3Key": "amplify-builds/likefunc-53787444413368302f4a-build.zip"
-                }
-            },
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d31ntaeatfps2g",
-                    "type": "cicd"
-                }
-            }
-        }
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-personalweb-dev-163308-authRole",
+      "UnauthRoleArn": "arn:aws:iam::881934424260:role/amplify-personalweb-dev-163308-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::881934424260:role/amplify-personalweb-dev-163308-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-personalweb-dev-163308-deployment",
+      "UnauthRoleName": "amplify-personalweb-dev-163308-unauthRole",
+      "StackName": "amplify-personalweb-dev-163308",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:881934424260:stack/amplify-personalweb-dev-163308/aeda34c0-5038-11ed-a233-0227f711bc36",
+      "AmplifyAppId": "d31n9jgedoixsb"
     }
+  }
 }

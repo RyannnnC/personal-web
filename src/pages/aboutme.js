@@ -23,12 +23,12 @@ function AboutMe () {
                         />
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ p:2 }}>
-                        <h1 className="centered"> 
+                        <h1 className="centered font-bold"> 
                             {t('alittle')} 
                             <span className="font-blue">{t('about')} </span>
                             {t('me')} 
                         </h1>
-                        <h4 className="justified font-thin">
+                        <h4 className="justified">
                             {t('intro')}
                         </h4>
                         <Grid container spacing={0}>   

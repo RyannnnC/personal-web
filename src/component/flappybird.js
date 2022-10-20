@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Container, Grid } from '@mui/material';
+import { Container } from '@mui/material';
 import './component.scss'
 import {bg,fg, bird0, bird1, bird2, pipeN, pipeS, gameover, _ok_, splash, ready} from './sprite.js'
 import {observer} from 'mobx-react'
-import {width, height} from '../helpers/detectWidth'
+import {width, height} from '../helpers/useWidth'
 import {rungame, states} from '../helpers/store';
 
 const SpriteWrapper = observer (class SpriteWrapper extends React.Component {

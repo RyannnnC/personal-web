@@ -33,9 +33,9 @@ function Games(props) {
         <React.Fragment>
             <Container maxWidth='false' className='games_container'>
               <Container maxWidth='xl'>
-              <Grid container spacing={0}>
+              <Grid container spacing={0} pt={3}>
                 <Grid item xs={12}>
-                    <h1 className="centered font-white"> 
+                    <h1 className="centered font-white font-bold"> 
                         {t('little')}
                         <span style={{color: '#000'}}>{t('games')} </span>      
                     </h1>           
@@ -50,9 +50,9 @@ function Games(props) {
                             },
                         }} className="game_card" item xs={12} sm={12/Object.values(games).length} onClick={() => gotoGame(game.title)}>
                             <img src={game.image} className="game_bg" alt={game.title}/>
-                            <h2 className="centered font-white"> 
+                            <h1 className="centered font-white font-bold"> 
                                 {t(game.title)}  
-                            </h2> 
+                            </h1> 
                         </Grid>
                     )
                 })}

@@ -1,7 +1,7 @@
 import { Marker } from '@react-google-maps/api';
 import React from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
-import useWidth from '../helpers/detectWidth';
+import useWidth from '../helpers/useWidth';
 
 const center = {
     lat: -33.92243936126831, 

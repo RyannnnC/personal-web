@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { Container, Grid } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-import EmailIcon from '@mui/icons-material/Email';
-import { WechatOutlined } from '@ant-design/icons';
+import { MdPhoneIphone, MdEmail } from 'react-icons/md';
+import { AiFillWechat } from 'react-icons/ai';
 import Divider from '@mui/material/Divider';
 import './pages.scss'
 import SimpleMap from '../component/map'
@@ -12,19 +11,19 @@ import MessageForm from '../component/messageForm'
 const contacts = {
     wechat: {
         name: 'wechat',
-        icon: <WechatOutlined style={{ fontSize:35}}/>,
+        icon: <AiFillWechat size={35}/>,
         url: null,
         content: '398268537',
     },
     phone: {
         name: 'phone',
-        icon: <PhoneIphoneIcon fontSize='large'/>,
+        icon: <MdPhoneIphone size={35}/>,
         url: 'tel:+61416502123',
         content: '+61 416 502 123',
     },
     email: {
         name: 'email',
-        icon: <EmailIcon fontSize='large'/>,
+        icon: <MdEmail size={35}/>,
         url: 'mailto:qq398268537@gmail.com',
         content: 'qq398268537@gmail.com',
     },
@@ -37,10 +36,10 @@ function ContactMe (props) {
     <React.Fragment>
         <Container maxWidth='false' className='contactme_container'>
             <Container maxWidth='xl'>
-            <Grid container spacing={0}>
+            <Grid container spacing={0} pt={3}>
                 <Grid item xs={2}/>
                 <Grid item xs={8}>
-                    <h1 className="centered"> 
+                    <h1 className="centered font-bold"> 
                         <span className="font-blue">{t('contact')} </span>
                         {t('me')}
                     </h1>              
@@ -64,13 +63,13 @@ function ContactMe (props) {
                                 }
                             }}>
                                 {contact.icon}
-                                <h5>
+                                <h3 className='font-bold' style={{paddingBottom: '10px'}}>
                                     {t(contact.name)}
-                                </h5>
-                                <Divider variant="middle"/>
-                                <h5>
+                                </h3>
+                                <Divider variant="middle" style={{marginBottom: '10px'}}/>
+                                <h3 className='font-bold' >
                                    {contact.content}        
-                                </h5>
+                                </h3>
                             </div>
                         </Grid>
                     )
